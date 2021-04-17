@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+    href="https://unpkg.com/tailwindcss@^2.0.1/dist/tailwind.min.css"
+    rel="stylesheet"
+    />
+    <title>Marvel Stories</title>
+	</head>
+	<body>
+    <div class="flex items-center justify-center py-6 space-y-8 text-5xl text-red-700"><span class="text-red-700">Marvel</span><span class="text-gray-800">Stories</span></div>
+    <div class="px-4 py-12 break-words bg-gray-200 border min-w-screen">
+      <div class="flex items-center text-xl text-gray-900">
+        {{ story['title'] }}
+      </div>
+      <div class="py-5 text-gray-700 text-l">
+        {{ story['description'] }}
+      </div>
+    </div>
+    <div class="flex flex-col justify-center px-4 py-12 break-words bg-gray-100 border min-w-screen md:flex-row md:flex-wrap items-initial sm:px-6 lg:px-8">
+      {% for character in characters %}
+        <div class="flex flex-col border border-gray-200 rounded-lg md:items-center md:flex-col md:px-7 pb-7">
+          <img class="rounded-lg shadow-xl max-h-96 hover:shadow-l"
+          src="{{ character['thumbnail'] }}" />
+          <div class="px-3 py-4 text-3xl text-gray-900">
+            {{ character['name'] }}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="flex items-end justify-end px-6 py-6 space-y-8 text-l">
+      {{ story['attributionText']}}
+    </div>
+	</body>
+</html>

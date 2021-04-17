@@ -13,25 +13,41 @@
     <div class="flex items-center justify-center py-6 space-y-8 text-5xl text-red-700"><span class="text-red-700">Marvel</span><span class="text-gray-800">Stories</span></div>
     <div class="px-4 py-12 break-words bg-gray-200 border min-w-screen">
       <div class="flex items-center text-xl font-bold text-gray-900 md:text-3xl">
-        {{ story['title'] }}
+        X-Men: Children of the Atom 6 cover
       </div>
       <div class="py-5 text-gray-700 text-l md:text-xl">
-        {{ story['description'] }}
+        
       </div>
     </div>
     <div class="flex flex-col justify-center px-4 py-12 break-words bg-gray-100 border min-w-screen md:flex-row md:flex-wrap items-initial sm:px-6 lg:px-8">
-      {% for character in characters %}
+      
         <div class="flex flex-col border border-gray-200 rounded-lg md:items-center md:flex-col md:px-7 pb-7">
           <img class="rounded-lg shadow-xl max-h-96 hover:shadow-l"
-          src="{{ character['thumbnail'] }}" />
+          src="http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg" />
           <div class="px-3 py-4 text-3xl text-gray-900">
-            {{ character['name'] }}
+            Charles Xavier
           </div>
         </div>
-      {% endfor %}
+      
+        <div class="flex flex-col border border-gray-200 rounded-lg md:items-center md:flex-col md:px-7 pb-7">
+          <img class="rounded-lg shadow-xl max-h-96 hover:shadow-l"
+          src="http://i.annihil.us/u/prod/marvel/i/mg/3/b0/5261a7e53f827.jpg" />
+          <div class="px-3 py-4 text-3xl text-gray-900">
+            Magneto
+          </div>
+        </div>
+      
+        <div class="flex flex-col border border-gray-200 rounded-lg md:items-center md:flex-col md:px-7 pb-7">
+          <img class="rounded-lg shadow-xl max-h-96 hover:shadow-l"
+          src="http://i.annihil.us/u/prod/marvel/i/mg/8/03/510c08f345938.jpg" />
+          <div class="px-3 py-4 text-3xl text-gray-900">
+            X-Men
+          </div>
+        </div>
+      
     </div>
     <div class="flex items-end justify-end px-6 py-6 space-y-8 text-l">
-      {{ story['attributionText']}}
+      Data provided by Marvel. © 2021 MARVEL
     </div>
 	</body>
 </html>

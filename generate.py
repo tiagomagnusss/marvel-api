@@ -20,7 +20,7 @@ try:
 except:
 	exit(1)
 
-story = manager.getStory( character.get("STORY_ID") )
+story = manager.get_story( character.get("STORY_ID") )
 
 # fetch each character
 try:
@@ -36,7 +36,7 @@ except KeyError as e:
 
 characters = []
 for char in results["characters"]["items"]:
-	charData = manager.getCharacter(char["name"])
+	charData = manager.get_character(char["name"])
 	thumb = charData["data"]["results"][0]["thumbnail"]
 
 	try:

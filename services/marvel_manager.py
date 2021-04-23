@@ -45,7 +45,7 @@ class MarvelManager:
 
 		return response.json()
 
-	def getStory(self, id: int) -> dict:
+	def get_story(self, id: int) -> dict:
 		"""
 		Get a story with an specific ID
 
@@ -57,7 +57,7 @@ class MarvelManager:
 		"""
 		return self.__request__(f"stories/{id}")
 
-	def getCharacter(self, name: str) -> dict:
+	def get_character(self, name: str) -> dict:
 		"""
 		Get a character given its name
 
